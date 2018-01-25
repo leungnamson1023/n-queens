@@ -15,9 +15,23 @@
 
 
 
-window.findNRooksSolution = function(n) {
-  var solution = undefined; //fixme
 
+
+
+window.findNRooksSolution = function(n) {
+  var solution = new Board({n: n}); //fixme
+  // console.log(solution);
+
+  // console.log(solution.rows()[0]);
+  console.log(solution.rows()[0].window.togglePiece(0, 1));
+  // for (var i = 0; i < solution.rows().length; i++) {
+  //   for (var j = 0; j < solution.rows().length; j++) {
+  //     if (solution.rows()[i].window.hasRowConflictAt(i) && solution.rows()[i].hasColConflictAt(i)) {
+  //       solution.rows()[i].togglePiece(i, j);
+  //     }
+  //   }
+  //}
+  
   console.log('Single solution for ' + n + ' rooks:', JSON.stringify(solution));
   return solution;
 };
